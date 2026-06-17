@@ -1,0 +1,4 @@
+# Ignore media and project files
+*.mp4
+*.m4a
+*.mlt
