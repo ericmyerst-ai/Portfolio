@@ -8,8 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 50px 20px;
             line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fcfcfc;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         .btn {
             display: inline-block;
@@ -24,6 +31,7 @@
         .btn:hover {
             background-color: #357ae8;
         }
+        /* Landscape 16:9 Video Container (Sane Club) */
         .video-container {
             margin: 30px auto;
             max-width: 560px;
@@ -33,10 +41,23 @@
             width: 100%;
             height: 315px;
         }
+        /* Vertical 9:16 Video Container (FocusPivot) */
+        .vertical-video-container {
+            margin: 40px auto;
+            max-width: 315px; /* Perfectly proportioned for smartphone videos */
+            width: 100%;
+        }
+        .vertical-iframe {
+            width: 100%;
+            height: 560px; /* 9:16 aspect ratio */
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border: 1px solid #ddd;
+        }
         .vibe-code-note {
             font-size: 0.9em;
             color: #555;
-            margin-top: 20px;
+            margin-top: 40px;
             font-style: italic;
         }
         .description-section {
@@ -50,6 +71,13 @@
         }
         .description-section h3 {
             margin-top: 0;
+            color: #333;
+        }
+        .divider {
+            max-width: 600px;
+            margin: 50px auto;
+            border: 0;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
@@ -58,10 +86,12 @@
     <h1>Portfolio Hub</h1>
     <p>Welcome to my professional portfolio.</p>
 
+    <!-- Project 1: Sane Club Video Demo (Landscape) -->
     <div class="video-container">
+        <!-- Re-add your Sane Club YouTube video URL inside the src="" below -->
         <iframe class="responsive-iframe" 
-                src="https://www.youtube.com/embed/oIDSkRjD38U?si=TjdI9QjzVKRuITex" 
-                title="YouTube video player" 
+                src="YOUR_SANECLUB_YOUTUBE_URL_HERE" 
+                title="Sane Club Demo" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
@@ -69,6 +99,7 @@
         </iframe>
     </div>
 
+    <!-- Project 1 Description -->
     <div class="description-section">
         <h3>Sane Club: Wholesale Curation Engine</h3>
         <p>How fast can you go from an idea to a functional procurement engine? In this demo, I showcase "Sane Club," an intelligent hardware curation platform built to eliminate choice paralysis.</p>
@@ -80,12 +111,43 @@
         </ul>
     </div>
 
-    <div class="vibe-code-note">
-        <p>This demo was rapid-prototyped using AI-assisted development ("vibe coding"), <br> 
-        leveraging LLMs to iterate on functional logic and design.</p>
+    <hr class="divider">
+
+    <!-- Project 2: Digital Detox Video Demo (Vertical / 9:16) -->
+    <div class="vertical-video-container">
+        <!-- REPLACE YOUR_VIDEO_ID with the unique code from your YouTube Short link -->
+        <iframe class="vertical-iframe" 
+                src="https://youtube.com/embed/HUc6IKte_t4?si=6hi5zZsbYvqMDJlY" 
+                title="Digital Detox Demo" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+        </iframe>
     </div>
 
-    <a href="Sane Club Executive Briefing.pdf" class="btn" target="_blank">Executive Briefing</a>
+    <!-- Project 2 Description -->
+    <div class="description-section">
+        <h3>FocusPivot: Digital Detox Interceptor</h3>
+        <p>An Android utility application built using Kotlin and Jetpack Compose designed to break unconscious phone scrolling habits. When a user launches a target app, the system interrupts the behavior with a mindful pattern-interrupt and offers a productive pivot to remote career opportunities.</p>
+        <ul>
+            <li><strong>Seamless Interception:</strong> Runs an active Foreground Service utilizing system-level OS APIs to scan running packages in real-time.</li>
+            <li><strong>Mindful Interruption:</strong> Blocks target apps (like Google Chrome, Instagram, or TikTok) with a 5-second animated breathing loop to disrupt automatic muscle memory.</li>
+            <li><strong>Configurable Settings:</strong> Uses on-device SharedPreferences to allow users to toggle their blocklist settings directly inside the UI.</li>
+            <li><strong>Temporary Bypass:</strong> Implements a 2-minute unblock window, allowing users to safely return to their task before the lock re-engages.</li>
+            <li><strong>Live Career Feed:</strong> Queries the Jobicy remote job board API dynamically in real-time to load active English-speaking career listings.</li>
+        </ul>
+    </div>
+
+    <!-- Vibe Code Note -->
+    <div class="vibe-code-note">
+        <p>These projects were rapid-prototyped using AI-assisted development ("vibe coding"), <br> 
+        leveraging LLMs to iterate on functional system logic and interface design.</p>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <a href="Sane Club Executive Briefing.pdf" class="btn" target="_blank">Executive Briefing</a>
+    </div>
 
 </body>
 </html>
