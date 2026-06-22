@@ -31,7 +31,6 @@
         .btn:hover {
             background-color: #357ae8;
         }
-        /* Landscape 16:9 Video Container (Sane Club) */
         .video-container {
             margin: 30px auto;
             max-width: 560px;
@@ -41,15 +40,14 @@
             width: 100%;
             height: 315px;
         }
-        /* Vertical 9:16 Video Container (FocusPivot) */
         .vertical-video-container {
             margin: 40px auto;
-            max-width: 315px; /* Proportioned for vertical smartphone shorts */
+            max-width: 315px;
             width: 100%;
         }
         .vertical-iframe {
             width: 100%;
-            height: 560px; /* 9:16 aspect ratio */
+            height: 560px;
             border-radius: 16px;
             box-shadow: 0 8px 24px rgba(0,0,0,0.12);
             border: 1px solid #ddd;
@@ -86,9 +84,14 @@
     <h1>Portfolio Hub</h1>
     <p>Welcome to my professional portfolio.</p>
 
-    <!-- Project 1: Sane Club Video Demo (Landscape) -->
+    <div class="description-section" style="border-color: #4285f4; border-width: 2px;">
+        <h3>Executive Summary</h3>
+        <p>Experienced professional specializing in Sales Engineering, system architecture, and rapid prototyping. I bridge the gap between complex technical requirements and business value, leveraging AI-assisted development to build high-integrity systems that solve critical procurement, productivity, and sales execution challenges.</p>
+    </div>
+
+    <hr class="divider">
+
     <div class="video-container">
-        <!-- Re-add your Sane Club YouTube video URL inside the src="" below -->
         <iframe class="responsive-iframe" 
                 src="https://www.youtube.com/embed/oIDSkRjD38U?si=brkVwkiUFiCYVUs2" 
                 title="Sane Club Demo" 
@@ -99,23 +102,19 @@
         </iframe>
     </div>
 
-    <!-- Project 1 Description -->
     <div class="description-section">
         <h3>System Blueprint: Sane Club Automated Curation Engine</h3>
-        <p>How do you streamline enterprise procurement and eliminate data fatigue without risking AI inaccuracies? This functional prototype demonstrates a high-integrity procurement engine designed to filter massive hardware inventories down to three optimal options based on rigid business constraints.</p>
+        <p>A functional prototype designed to filter massive hardware inventories into optimal choices based on rigid business constraints, ensuring reliability without AI hallucinations.</p>
         <ul>
-            <li><strong>Deterministic Business Logic:</strong> Designed a constraint-matching architecture that evaluates user operational profiles against structural and spatial realities, ensuring 100% reliable alignment without the risk of LLM hallucinations.</li>
-            <li><strong>Hard Constraint Filtering:</strong> Engineered a systemic boundary mechanism that automatically disqualifies hardware assets failing to meet baseline power, compliance, or footprint requirements.</li>
-            <li><strong>Lifecycle Data Governance:</strong> Integrated a "Longevity Profile" framework into the core data registry to prioritize repairability indexes, asset depreciation data, and sustainable life cycles.</li>
-            <li><strong>Accelerated System Prototyping:</strong> Utilized advanced natural language orchestration and AI-assisted workflow engines to rapidly model, test, and deploy a fully functional front-to-back system architecture.</li>
+            <li><strong>Deterministic Business Logic:</strong> Architected constraint-matching that aligns operational profiles with physical realities.</li>
+            <li><strong>Hard Constraint Filtering:</strong> Systemic boundary mechanism for power, compliance, and footprint requirements.</li>
+            <li><strong>Lifecycle Governance:</strong> Integrated repairability and sustainability indexes into the data registry.</li>
         </ul>
     </div>
 
     <hr class="divider">
 
-    <!-- Project 2: FocusPivot Video Demo (Vertical / 9:16) -->
     <div class="vertical-video-container">
-        <!-- REPLACE YOUR_FOCUSPIVOT_YOUTUBE_ID with the unique code from your YouTube Short link -->
         <iframe class="vertical-iframe" 
                 src="https://youtube.com/embed/HUc6IKte_t4?si=6hi5zZsbYvqMDJlY" 
                 title="FocusPivot Demo" 
@@ -126,25 +125,36 @@
         </iframe>
     </div>
 
-    <!-- Project 2 Description -->
     <div class="description-section">
         <h3>FocusPivot: Digital Detox Interceptor</h3>
-        <p>An intentional productivity engine built to disrupt unconscious mobile consumption patterns by replacing infinite-scroll habits with real-time opportunities for professional advancement.</p>
+        <p>An intentional productivity engine disrupting unconscious mobile consumption by replacing infinite-scroll habits with real-time professional advancement opportunities.</p>
         <ul>
-            <li><strong>System-Level Package Interception:</strong> Engineered an active native Foreground Service that leverages low-level OS APIs to monitor application states in real-time, executing high-integrity intervention boundaries seamlessly.</li>
-            <li><strong>Behavioral Pattern Disruption:</strong> Designed an animated "Intentionality Gate" that enforces a mandatory 5-second mindfulness pause, effectively breaking automatic muscle memory loops before user distraction occurs.</li>
-            <li><strong>On-Device Governance & Bypass Logic:</strong> Implemented local state persistence architectures to handle user configuration profiles, paired with a deterministic 2-minute session-bypass mechanism to preserve user autonomy.</li>
-            <li><strong>Dynamic External API Orchestration:</strong> Developed an asynchronous networking layer that queries remote career database APIs in real-time, instantly transforming a moment of digital distraction into a high-value professional development funnel.</li>
+            <li><strong>Package Interception:</strong> Leveraged OS-level APIs for real-time application state monitoring.</li>
+            <li><strong>Behavioral Disruption:</strong> Implemented "Intentionality Gates" to break muscle-memory loops.</li>
+            <li><strong>External API Orchestration:</strong> Asynchronous networking layer to surface professional development funnels.</li>
         </ul>
     </div>
 
-    <!-- Vibe Code Note -->
+    <hr class="divider">
+
+    <div class="description-section">
+        <h3>AE Intelligence Bot: AI-Powered Sales Engineering</h3>
+        <p>A specialized sales engineering assistant automating prospect auditing and outreach strategy through synthesized SEC and market data.</p>
+        <ul>
+            <li><strong>Automated SEC Audits:</strong> Extraction pipeline for real-time Section 1A risk analysis.</li>
+            <li><strong>Industry Benchmarking:</strong> Maps client pain points to industry standards for credible business cases.</li>
+            <li><strong>Strategy Engine:</strong> Generates personalized "Executive Hooks" and fit scores via AI-orchestrated workflows.</li>
+        </ul>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://github.com/ericmyerst-ai/AE-Intelligence-Bot" class="btn" target="_blank" style="margin: 0;">View on GitHub</a>
+        </div>
+    </div>
+
     <div class="vibe-code-note">
         <p>These projects were rapid-prototyped using AI-assisted development ("vibe coding"), <br> 
         leveraging LLMs to iterate on functional system logic and interface design.</p>
     </div>
 
-    <!-- Restored Executive Briefing Button -->
     <div style="margin-top: 30px;">
         <a href="Sane Club Executive Briefing.pdf" class="btn" target="_blank">Executive Briefing</a>
     </div>
