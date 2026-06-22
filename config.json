@@ -1,0 +1,53 @@
+{
+  "gateway_configuration": {
+    "version": "1.0.0",
+    "environment": "production",
+    "port": 8080
+  },
+  "security_policies": {
+    "data_loss_prevention": {
+      "scan_outgoing_prompts": true,
+      "masking_character": "*",
+      "redaction_targets": [
+        "social_security_numbers",
+        "credit_card_numbers",
+        "api_keys",
+        "private_rsa_keys"
+      ],
+      "block_on_violation": false
+    }
+  },
+  "rate_limiting_and_cost_governance": {
+    "default_policy": {
+      "max_tokens_per_minute": 40000,
+      "max_cost_per_day_usd": 150.00,
+      "action_on_breach": "throttle_and_alert"
+    },
+    "tier_overrides": {
+      "engineering_sandbox": {
+        "max_cost_per_day_usd": 25.00,
+        "action_on_breach": "hard_block"
+      },
+      "production_core": {
+        "max_cost_per_day_usd": 1500.00,
+        "action_on_breach": "queue_and_notify"
+      }
+    }
+  },
+  "unified_routing_abstraction": {
+    "active_routing_strategy": "cost_optimized",
+    "fallback_enabled": true,
+    "provider_endpoints": {
+      "primary": {
+        "provider": "huggingface",
+        "model_id": "meta-llama/Meta-Llama-3-70B-Instruct",
+        "timeout_ms": 3000
+      },
+      "secondary": {
+        "provider": "anthropic",
+        "model_id": "claude-3-5-sonnet",
+        "timeout_ms": 5000
+      }
+    }
+  }
+}
